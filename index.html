@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // TASK 1
+var weekDays =["Sun","Mon","Tues","Wed","Thur","Fri","Sat"]
+var now = new Date()
+console.log(now);
+console.log("Today is ", weekDays[now.getDay()]+ "day");
+var convert = now.getHours()
+if(convert > 12){
+var hours = now.getHours() - 12 + " PM"
+}else if(convert == 0) {
+var hours = now.getHours() + 12 + " AM"
+}else{
+    var hours = now.getHours() + " AM"
+}
+console.log(`Current Time is   ${hours}: ${now.getMinutes()}:${now.getSeconds()}`);
+ 
+        // TASK 2
+var CurrentDate = now.getDate()
+var CurrentMonth = now.getMonth()
+var CurrentYear = now.getFullYear()
+console.log(`${CurrentDate}/${CurrentMonth}/${CurrentYear}`);
+console.log(`${CurrentDate}-${CurrentMonth}-${CurrentYear}`);
+console.log(`${CurrentMonth}/${CurrentDate}/${CurrentYear}`);
+console.log(`${CurrentMonth}-${CurrentDate}-${CurrentYear}`)    
+
+        // Task 4
+var userNum = +prompt("Enter your number")
+var compNum = Math.round(Math.random()*10)
+console.log("OUR NUMBER IS " + compNum);
+if(userNum == compNum){
+ console.log("GOOD WORK");
+}else{
+ console.log("TRY AGAIN");
+}
+
+        //TASK 5
+// var now = new Date()
+// var theDay = now.getTime()
+// console.log(theDay);
+// var timeIn14 = new Date("14 August, 2024").getTime()
+// console.log(timeIn14);
+// var left = timeIn14 - theDay
+// console.log(left);
+// var minus = Math.floor(left/1000*60*60*24)
+// console.log(minus);
+// var hours = 24 - now.getHours() 
+// var min = 60 - now.getHours() 
+// var sec = 60 - now.getSeconds() 
+// console.log(`${hours} : ${min} : ${sec}`);
+
+
+         // TASK 7
+var table = +prompt("Enter the Number for chceking the table")
+if (table%3 == 0) {
+    console.log("This Number Comes In 3 Table");
+}else if(table%7 == 0){
+    console.log("This Number Comes In 7 Table");
+}else{
+    console.log("This number Not found in 3 Or 7 tables");
+}
+
+
+//         // TASK 9
+var rangeNum = +prompt("Enter Your desire NUmber")
+if(rangeNum >= 50 && rangeNum <= 99){
+    console.log(true);
+}else{
+    console.log(false);
+}
+
+        // TAsk 10 
+var firstNum = +prompt("Enter The 1st number")
+var secondNum = +prompt("Enter The 2nd number")
+var thirdNum = +prompt("Enter The 3rd number")
+if(firstNum >= 50 && firstNum <= 99 ||secondNum >= 50 && secondNum <= 99 ||thirdNum >= 50 && thirdNum <= 99){
+    console.log(true);
+}else{
+    console.log(false);
+}
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
